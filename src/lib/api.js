@@ -47,7 +47,7 @@ export async function addQuote(quoteData) {
   });
 
   if (response.statusText !== "OK") {
-    throw new Error(data.message || "Could not create quote.");
+    throw new Error(quoteData.message || "Could not create quote.");
   }
 
   return null;
